@@ -16,7 +16,7 @@ double processNumber(double number) {
 
 // Function to print the result
 void printResult(double result) {
-    cout << "The result is: " << result << endl;
+    cout << "\n Half Of Your Number Is: " << result << endl;
 }
 
 int main() {
