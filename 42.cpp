@@ -19,9 +19,14 @@ int hoursToSeconds(int hours)
     return hours * 60 * 60; // Convert hours to seconds
 }
 
-int allSeconds(int days, int hours, int seconds)
+int minutesToSecconds(int minutes)
 {
-    int totalSeconds = daysToSeconds(days) + hoursToSeconds(hours) + seconds;
+    return minutes * 60;
+}
+
+int allSeconds(int days, int hours, int minutes, int seconds)
+{
+    int totalSeconds = daysToSeconds(days) + hoursToSeconds(hours) + minutesToSecconds(minutes) + seconds;
     cout << "All seconds: " << totalSeconds << endl;
     return totalSeconds; // Return the total seconds
 }
@@ -30,9 +35,10 @@ int main()
 {
     int days = readNumber("Enter number of days: \n");
     int hours = readNumber("Enter number of hours: \n");
+    int minutes = readNumber("Enter number of minutes: \n");
     int seconds = readNumber("Enter number of seconds: \n");
 
-    allSeconds(days, hours, seconds);
+    allSeconds(days, hours, minutes ,seconds);
 
     return 0;
 }
